@@ -1,0 +1,40 @@
+server:
+  # service startup port
+  port: :8888
+
+mysql:
+  # mysql url
+  url: 127.0.0.1
+  # mysql username
+  username:
+  # mysql password
+  password:
+
+# main net config
+mainNet:
+  contract:
+    # cron，5s
+    corn: 0/5 * * * * ?
+    # RPC url
+    rpc: https://api.calibration.node.glif.io/rpc/v1
+    #  absolute path
+    abiPath:
+    # contract address
+    contractAddress:
+    # wallet private key
+    privateKey:
+    # wallet address
+    walletAddress:
+    # gas limit
+    gasLimit:
+
+# test net config
+testNet:
+  contract:
+    corn: 3/5 * * * * ?
+    rpc: https://api.calibration.node.glif.io/rpc/v1
+    abiPath:
+    contractAddress:
+    privateKey:
+    walletAddress:
+    gasLimit:

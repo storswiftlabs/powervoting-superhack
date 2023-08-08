@@ -1,0 +1,368 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "proposalCid",
+				"type": "string"
+			}
+		],
+		"name": "count",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string[]",
+				"name": "proposals",
+				"type": "string[]"
+			}
+		],
+		"name": "countBatch",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "proposalCid",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "optionIds",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint248",
+				"name": "expTime",
+				"type": "uint248"
+			},
+			{
+				"internalType": "uint256",
+				"name": "net",
+				"type": "uint256"
+			}
+		],
+		"name": "createProposal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "proposalCid",
+				"type": "string"
+			}
+		],
+		"name": "getProposal",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint248",
+						"name": "expTime",
+						"type": "uint248"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCounted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "optionIds",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "optionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "votes",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct PowerVoting.VoteResult[]",
+						"name": "voteResults",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct PowerVoting.Proposal",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string[]",
+				"name": "proposalCidList",
+				"type": "string[]"
+			}
+		],
+		"name": "getProposalList",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint248",
+						"name": "expTime",
+						"type": "uint248"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCounted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "optionIds",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "optionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "votes",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct PowerVoting.VoteResult[]",
+						"name": "voteResults",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct PowerVoting.Proposal[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "start",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "end",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "net",
+				"type": "uint256"
+			}
+		],
+		"name": "getProposalListByIndex",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint248",
+						"name": "expTime",
+						"type": "uint248"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCounted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "optionIds",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "optionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "votes",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct PowerVoting.VoteResult[]",
+						"name": "voteResults",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct PowerVoting.Proposal[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "onwer",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "int256",
+				"name": "pageIndex",
+				"type": "int256"
+			},
+			{
+				"internalType": "int256",
+				"name": "pageSize",
+				"type": "int256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "net",
+				"type": "uint256"
+			}
+		],
+		"name": "proposalList",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "totalSize",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "cid",
+								"type": "string"
+							},
+							{
+								"internalType": "uint248",
+								"name": "expTime",
+								"type": "uint248"
+							},
+							{
+								"internalType": "bool",
+								"name": "isCounted",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "optionIds",
+								"type": "uint256[]"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "optionId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "votes",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct PowerVoting.VoteResult[]",
+								"name": "voteResults",
+								"type": "tuple[]"
+							}
+						],
+						"internalType": "struct PowerVoting.Proposal[]",
+						"name": "proposalList",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct PowerVoting.PageRes",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "proposalCid",
+				"type": "string"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint8",
+						"name": "optionId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint248",
+						"name": "votePercent",
+						"type": "uint248"
+					}
+				],
+				"internalType": "struct PowerVoting.VoteInfo[]",
+				"name": "voteInfoList",
+				"type": "tuple[]"
+			}
+		],
+		"name": "vote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

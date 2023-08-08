@@ -1,0 +1,42 @@
+@text-white: #ffffff;
+@text-blue: rgb(147, 197, 253);
+
+
+.home-table {
+  .ant-pagination {
+    .ant-pagination-item {
+      a {
+        color: @text-white;
+      }
+    }
+    .ant-pagination-item-active {
+      background: #273141;
+      border: 1px solid #313D4F;
+      a {
+        color: @text-white;
+      }
+    }
+    .ant-pagination-item-link {
+      color: @text-white;
+      &:hover {
+        color: @text-blue;
+      }
+      .ant-pagination-item-ellipsis {
+        color: @text-white;
+        &:hover {
+          color: @text-blue;
+        }
+      }
+    }
+    .ant-pagination-options {
+      .ant-select-selector {
+        background: #273141;
+        border: 1px solid #313D4F;
+        color: @text-white;
+      }
+      .ant-select-arrow {
+        color: @text-white;
+      }
+    }
+  }
+}
