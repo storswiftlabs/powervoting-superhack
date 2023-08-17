@@ -1,0 +1,18 @@
+type Count @entity(immutable: true) {
+  id: Bytes!
+  cid: String! # string
+  expTime: BigInt! # uint248
+  voteResults: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Create @entity(immutable: true) {
+  id: Bytes!
+  cid: String! # string
+  expTime: BigInt! # uint248
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

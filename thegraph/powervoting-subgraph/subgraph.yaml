@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: powerVoting
+    network: mainnet
+    source:
+      address: "0x98a918c7DFa25a48616EB26401B03D6CA97c4d55"
+      abi: powerVoting
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Count
+        - Create
+      abis:
+        - name: powerVoting
+          file: ./abis/powerVoting.json
+      eventHandlers:
+        - event: Count(string,uint248,(uint256,uint256)[])
+          handler: handleCount
+        - event: Create(string,uint248)
+          handler: handleCreate
+      file: ./src/power-voting.ts
